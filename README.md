@@ -1,3 +1,3 @@
 deckofcards
 ===========
-The goal here was to put the cards onto a grid and make a few changes to the images.
+Background music added, card backs changed, game placed on a grid, terrible title image changed to text.
