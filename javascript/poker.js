@@ -30,14 +30,14 @@ for (i=1; i<n; i++) {
 for (i=1; i<6; i++) {
   hand[i] = deck[i];
   document.images[i].src = hand[i].fname();
-  document.images[i+5].src = "hold.gif";
+  document.images[i+5].src = "images/hold.gif";
   held[i] = false
 }
 
 dealt = true;
 score = score - 1; //deduct one for bet amount
 document.form1.total.value = score;
-document.images[11].src="draw.gif";
+document.images[11].src="images/draw.gif";
 Addscore();
 
 }
@@ -46,11 +46,11 @@ function Hold(num) {
   if (!dealt) return;
   if (!held[num]) {
     held[num]=true;
-    document.images[5+num].src="hold2.gif"
+    document.images[5+num].src="images/hold2.gif"
   }
   else {
     held[num]=false;
-    document.images[5+num].src="hold.gif"
+    document.images[5+num].src="images/hold.gif"
   }
 }
 
@@ -65,13 +65,13 @@ function Draw() {
   }
 
   dealt = false;
-  document.images[11].src="deal.gif";
+  document.images[11].src="images/deal.gif";
   score += Addscore();
   document.form1.total.value = score;
 }
 // Make a filename for an image, given Card object
 function fname() {
-  return this.num + this.suit + ".gif";
+  return "images/" + this.num + this.suit + ".gif";
 
 }
 // Constructor for Card objects
