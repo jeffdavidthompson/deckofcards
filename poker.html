@@ -3,12 +3,12 @@
 <head>
 <title>Draw Poker</title>
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body class="container">
-<img src="gaga.png" width=0 height=0>
+<img src="images/gaga.png" width=0 height=0>
 <h1>POKER!!!!!!!!!!!!!!!!!!!</h1>
 
 <form NAME="form1">
@@ -20,7 +20,7 @@
 <img border=0 src="images/gaga.png" height=136 width=106>
 </div>
 
-<div class="sixteen columns">
+<div class="sixteen columns" id="holdb">
 <a href="#" onClick="Hold(1)"><img border=0 src="images/hold.gif" height=50 width=106></a>
 <a href="#" onClick="Hold(2)"><img border=0 src="images/hold.gif" height=50 width=106></a>
 <a href="#" onClick="Hold(3)"><img border=0 src="images/hold.gif" height=50 width=106></a>
@@ -38,16 +38,16 @@
 <div class="sixteen columns">
 <br>
 <a href="#" onClick="DealDraw()">
-<img border=0 src="images/deal.gif" height=50 width=106></a>
+<img id="deal" border=0 src="images/deal.gif" height=50 width=106></a>
 </div>
 </form>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="javascript/poker.js"></script>
 </body>
 <audio controls autoplay style="visibility:hidden">
-  <source src="sound/pokerface.ogg" type="audio/ogg">
+<source src="sound/pokerface.ogg" type="audio/ogg">
 Your browser does not support the audio element.
 </audio>
 </html>
-<script type="text/javascript" src="javascript/poker.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+

@@ -8,6 +8,7 @@ function DealDraw() {
   if (dealt == true) Draw();
   else Deal();
 }
+
 function Deal() {
 // fill the deck (in order, for now)
 for (i = 1; i<14; i++) {
@@ -16,6 +17,7 @@ for (i = 1; i<14; i++) {
   deck[i+26] = new Card(i,"s")
   deck[i+39] = new Card(i,"d")
 }
+
 // shuffle the deck
 var n = Math.floor(400 * Math.random() + 500);
 for (i=1; i<n; i++) {
@@ -41,6 +43,7 @@ document.images[11].src="images/draw.gif";
 Addscore();
 
 }
+
 //Hold or discard a card
 function Hold(num) {
   if (!dealt) return;
@@ -157,3 +160,25 @@ document.form1.message.value="No Score";
 return 0;
 
 }
+
+//JQ stuff
+
+//http://stackoverflow.com/questions/17507870/jquery-image-changing-on-hover
+
+$(function(){
+
+  $('#deal').hover(function () {
+    former = this.src
+    this.src = 'images/draw.gif';
+  }, function () {
+    this.src = former;
+  });
+
+  $('#holdb img').hover(function () {
+    former = this.src
+    this.src = 'images/hold2.gif';
+  }, function () {
+    this.src = former;
+  });
+
+});
