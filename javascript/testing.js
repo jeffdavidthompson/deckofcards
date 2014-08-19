@@ -1,4 +1,4 @@
-$(document).ready(function () {
+/*$(document).ready(function () {
   $('div').css('background-color', '#000000');
 });
 
@@ -11,3 +11,4 @@ $(document).ready(function () {
     this.src = help;
   });
 });
+*/
