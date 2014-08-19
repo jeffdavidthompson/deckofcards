@@ -3,6 +3,7 @@ var dealt = false
 var hand = new Array(6)
 var held = new Array(6)
 var deck = new Array(53)
+
 function DealDraw() {
   if (dealt == true) Draw();
   else Deal();
@@ -72,10 +73,6 @@ function Draw() {
 function fname() {
   return this.num + this.suit + ".gif";
 
-
-
-
-
 }
 // Constructor for Card objects
 function Card(num,suit) {
@@ -85,7 +82,6 @@ function Card(num,suit) {
 }
 // Numeric sort function
 function Numsort(a,b) { return a - b; }
-
 
 //Calculate score
 function Addscore(){
@@ -99,6 +95,7 @@ var nums = new Array(5);
 for (i=0; i<5; i++){
   nums[i] = hand[i+1].num;
 }
+
 nums.sort(Numsort);
 //flush
 if (hand[1].suit == hand[2].suit && hand[2].suit == hand[3].suit && hand[3].suit == hand[4].suit && hand[4].suit == hand[5].suit) flush = true;
