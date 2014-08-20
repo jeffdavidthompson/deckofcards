@@ -1,5 +1,12 @@
 h1 {
-	font-family: Broadway;
-	font-size: 4em;
-	margin: 0 auto;
+  font-family: Broadway;
+  font-size: 4em;
+  margin: 0 auto;
+  margin-left: 170px;
+}
+
+.panel {
+  padding-top: 100px;
+  height:284px;
+  display:none;
 }

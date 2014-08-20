@@ -33,6 +33,7 @@ for (i=1; i<6; i++) {
   hand[i] = deck[i];
   document.images[i].src = hand[i].fname();
   document.images[i+5].src = "images/hold.gif";
+  $(document.images[i+5]).css('border','0px');
   held[i] = false
 }
 
@@ -50,10 +51,12 @@ function Hold(num) {
   if (!held[num]) {
     held[num]=true;
     document.images[5+num].src="images/hold2.gif"
+    $(document.images[5+num]).css('border','solid 2px teal');
   }
   else {
     held[num]=false;
     document.images[5+num].src="images/hold.gif"
+    $(document.images[5+num]).css('border','solid 0px blue');
   }
 }
 
@@ -163,22 +166,25 @@ return 0;
 
 //JQ stuff
 
-//http://stackoverflow.com/questions/17507870/jquery-image-changing-on-hover
-
 $(function(){
 
   $('#deal').hover(function () {
     former = this.src
     this.src = 'images/draw.gif';
+    this.css('border',"solid 2px red");
   }, function () {
     this.src = former;
-  });
+    });
 
   $('#holdb img').hover(function () {
     former = this.src
     this.src = 'images/hold2.gif';
   }, function () {
     this.src = former;
-  });
+    });
+
+/*  $('#deal').click(function(){
+    $('.panel').fadeToggle('slow');
+    });*/
 
 });
